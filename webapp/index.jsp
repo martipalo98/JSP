@@ -7,8 +7,7 @@
       <%
          out.println("Your IP address is " + request.getRemoteAddr());
       %>
-      <%! int i = 0; %> 
-<%! int a, b, c; %> 
-<%! Circle a = new Circle(2.0); %> 
+      <p>Today's date: <%= (new java.util.Date()).toLocaleString()%></p>
+
    </body>
 </html>
