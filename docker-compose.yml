@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  jenkins:
+    container_name: jenkins
+    restart: always
+    image: jenkins/jenkins:lts
+    ports:
+      - 8281:8281
+    volumes:
+      - jenkins-home:/var/jenkins_home
+  jsp: 
+    container_name: jsp
+    restart: always
+    image: tomcat:9.0.1-jre8-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - ./webapp:/usr/local/tomcat/webapps/webapp
+    command: bash -c "catalina.sh  run"
+volumes:
+  jenkins-home:
+  webapp:
