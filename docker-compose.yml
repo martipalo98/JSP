@@ -3,20 +3,25 @@ services:
   jenkins:
     container_name: jenkins
     restart: always
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:lts-jdk11
+    privileged: true
+    user: root
     ports:
       - 8281:8281
+      - 5000:5000
     volumes:
-      - jenkins-home:/var/jenkins_home
+      - ./jenkins-home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
   jsp: 
     container_name: jsp
     restart: always
     image: tomcat:9.0.1-jre8-alpine
     ports:
-      - 8080:8080
+      - 8081:8081
     volumes:
       - ./webapp:/usr/local/tomcat/webapps/webapp
-    command: bash -c "catalina.sh  run"
+    command: "catalina.sh  run"
 volumes:
   jenkins-home:
   webapp:
