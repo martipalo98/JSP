@@ -1,0 +1,14 @@
+[0;1;32m●[0m jenkins.service - LSB: Start Jenkins at boot time
+     Loaded: loaded (/etc/init.d/jenkins; generated)
+     Active: [0;1;32mactive (exited)[0m since Wed 2021-12-15 22:47:50 UTC; 25s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 75981 ExecStart=/etc/init.d/jenkins start (code=exited, status=0/SUCCESS)
+
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 systemd[1]: Starting LSB: Start Jenkins at boot time...
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 jenkins[75981]: Correct java version found
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 jenkins[75981]:  * Starting Jenkins Automation Server jenkins
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 su[76040]: [0;1;39m[0;1;31m[0;1;39m(to jenkins) root on none[0m
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 su[76040]: pam_unix(su-l:session): session opened for user jenkins by (uid=0)
+Dec 15 22:47:49 docker-s-2vcpu-4gb-ams3-01 su[76040]: pam_unix(su-l:session): session closed for user jenkins
+Dec 15 22:47:50 docker-s-2vcpu-4gb-ams3-01 jenkins[75981]:    ...done.
+Dec 15 22:47:50 docker-s-2vcpu-4gb-ams3-01 systemd[1]: Started LSB: Start Jenkins at boot time.
